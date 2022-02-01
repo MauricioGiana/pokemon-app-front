@@ -1,0 +1,29 @@
+.bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2em;
+    width: 20vw;
+}
+
+.searchbar {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    border-radius: 15px;
+    border: 2.5px solid #95d5b2;
+    background-color: #240046;
+    color: whitesmoke;
+}
+
+
+.searchicon {
+    height: 1.7vw;
+    width: 1.7vw;
+    position: relative;
+    right: 2.5vw;
+}
+
+.searchbar::placeholder {
+    font-size: 1.3vw;
+}

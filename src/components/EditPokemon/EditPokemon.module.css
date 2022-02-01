@@ -1,0 +1,251 @@
+
+.divedit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/images/bg-12.jpg");
+    background-size: cover;
+    height: calc(100vh - 67px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    height: 10vh;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+}
+
+.header > input {
+    width: 10%;
+    height: 50%;
+    font-size: 50%;
+}
+
+.header input:hover {
+    background-color: #240046;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 4vw;
+    font-weight: bold;
+    text-shadow: whitesmoke 0 0 10px;
+    margin-left: 15vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(16, 69, 29, 0.6);
+    color: whitesmoke;
+    width: 75vw;
+    border: 0.35vw solid whitesmoke;
+    border-radius: 2vw;
+}
+
+
+.formbody {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 10px;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+
+.item input {
+    font-size: 1.5vw;
+    border-radius: 5px;
+}
+
+.imagebox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 28vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.inputimg {
+    height: 13vh;
+    width: 12vw;
+    font-size: 1.5vh;
+    border-radius: 5px;
+    border: 1px solid black;
+    resize: none;
+}
+
+.itemimg {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.clear {
+    cursor: pointer;
+    color: red;
+    width: 20px;
+    font-size: 15px;
+    position: relative;
+    top: 10vh;
+    right: 2.8vw;
+}
+
+.itemimg img {
+    max-width: 13vw;
+    max-height: 13vw;
+    border-radius: 1.7vw;
+}
+
+.inputnumber {
+    width: 4vw;
+    height: 1.5vw;
+    font-size: 1.3vw;
+    border-radius: 5px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.showtypes {
+    width: 7vw;
+    height: 2vw;
+    background-color: #240046;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.showtypes:hover {
+    background-color: #8367c7;
+}
+
+.types {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 350px;
+}
+
+.selectedtypes {
+    display: flex;
+    gap: 10px;
+}
+
+.typeslist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5vw;
+    position: absolute;
+    left: 38vw;
+    bottom: 10vh;
+    background-color: rgba(36, 0, 70, 0.9);
+    padding: 0.7vw;
+    border-radius: 2vw;
+}
+
+.typebtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    border-radius: 1vw;
+    border: 0.1vw solid whitesmoke;
+    background-color: #b185db;
+    width: 110px;
+    transition: 0.5s;
+    width: 8vw;
+    height: 1.8vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+.divtype {
+    display: flex;
+    flex-direction: row;
+}
+
+.typebtn:hover {
+    background-color: #6d23b6;
+}
+
+.typebtn  input {
+    width: 1.4vw;
+}
+
+.typeselected {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    border-radius: 1vw;
+    border: 0.1vw solid #ff8500;
+    background-color: #35034f;
+    width: 8vw;
+    height: 1.8vw;
+    color: whitesmoke;
+    font-size: 1.2vw;
+}
+
+.typeselected input {
+    width: 1.4vw;
+}
+
+.typeselected:hover {
+    background-color: #6a040f;
+}
+
+.selectedtypes {
+    padding-bottom: 10px;
+}
+
+.submit {
+    display: flex;
+    justify-content: flex-end;
+    height: 2.5vw;
+    width: 12vw;
+    margin-left: 52vw;
+    padding-bottom: 10px;
+}
+
+.submit input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    background-color: #240046;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 1vw;
+    border: 0.25vw solid whitesmoke;
+}
+
+.submit input:hover {
+    background-color: #a9d126;
+    color: black;
+}

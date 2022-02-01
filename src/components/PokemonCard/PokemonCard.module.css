@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=IM+Fell+English+SC&family=Varela+Round&display=swap');
+
+
+.pokemoncard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5vw;
+    border: 0.5vw solid;
+    border-color: #0d1516;
+    width: 17vw;
+    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3), 3px 6px 20px 0 rgba(0, 0, 0, 0.2);
+    animation: slidein 0.5s;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(30%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.pokemoncard:hover {
+    border-color: #d100d1;
+}
+
+
+.divHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 5.5vw;
+    background-color: #38413f;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    color: white;
+    transition: 0.3s;
+}
+
+.divTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--nameCard-font-family);
+    height: 5.5vw;
+}
+
+.name {
+    color: white;
+    font-size: 1.6vw;
+}
+
+.name:hover {
+    color: #d4d700;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.longname {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.longname:hover {
+    color: #d4d700;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.customIcon {
+    width: 2vw;
+    height: 2vw;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.favIcon {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-right: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.favIconOn {
+    width: 2.3vw;
+    height: 2.3vw;
+    padding-right: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    color: yellow
+}
+
+.favIcon:hover {
+    background-color: #0d1516;
+    transition: 0.3s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.favIconOn:hover {
+    background-color: #0d1516;
+    transition: 0.3s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.divImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14vw;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: linear-gradient(to bottom, rgba(97, 61, 193, 0.7), rgba(255, 255, 255, 0.7) 50%);
+    
+}
+.pokeimg {
+    max-height: 100%;
+    max-width: 100%;
+    transition: 0.4s;
+}
+
+.pokeimg:hover {
+    transform: scale(1.04);
+}
+
+.divTypes {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(56, 65, 63);
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    height: 100%;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border-bottom: 1px solid #cbb2fe;
+    color: whitesmoke;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.divtype {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.divtype > img {
+    width: 1.6vw;
+}
+
+.typesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1vw;
+    height: 2vw;
+    width: 100%;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    color: whitesmoke;
+}
+
