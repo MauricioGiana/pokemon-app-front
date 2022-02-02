@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #7b2cbf;
-    height: 65px;
+    height: 5vw;
     position: sticky;
     top: 0;
     width: 100%;
@@ -20,13 +20,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 1.5vw;
 }
 
 .title {
     display: flex;
     flex-direction: column;
-    padding-left: 25px;
+    padding-left: 1.5vw;
     color: whitesmoke;
     width: 20vw;
 }
