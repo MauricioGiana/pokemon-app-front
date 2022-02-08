@@ -41,7 +41,7 @@ export default function CreatePokemon() {
             }
         }
         fetchData();
-    }, [dispatch, idPokemon]);
+    }, [dispatch, idPokemon, pokemon]);
 
 
     const handleChange = (event) => {
