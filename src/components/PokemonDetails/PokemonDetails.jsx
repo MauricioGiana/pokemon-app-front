@@ -16,6 +16,7 @@ const PokemonDetails = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
+    const pokemonDetails = useSelector(state => state.pokemon);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,7 +30,7 @@ const PokemonDetails = () => {
         fetchData();
     }, [id, dispatch, setLoading]);
 
-    const pokemonDetails = useSelector(state => state.pokemon);
+    
 
 
     const deleteFunction = (event) => {
@@ -65,12 +66,23 @@ const PokemonDetails = () => {
                     </div>
                     <div className={styles.info}>
                         <h3>Stats: </h3>
-                        <span>Hp: {pokemonDetails.hp}</span>
-                        <span>Attack: {pokemonDetails.attack}</span>
-                        <span>Defense: {pokemonDetails.defense}</span>
-                        <span>Speed: {pokemonDetails.speed}</span>
-                        <span>Height: {pokemonDetails.height}</span>
-                        <span>Weight: {pokemonDetails.weight}</span>
+                        {
+                            ['hp', 'attack', 'defense', 'speed', 'height', 'weight'].map(stat => (
+                                <div className={styles.stat} key={stat}>
+                                    <label className={styles.statname}>{stat[0].toUpperCase() + stat.slice(1)}: </label>
+                                    <input
+                                        className={styles.range}
+                                        type="range"
+                                        name={stat}
+                                        value={pokemonDetails && pokemonDetails[stat]}
+                                        min="0"
+                                        max="200"
+                                        disabled
+                                    />
+                                    <output className={styles.outputnumber}>{pokemonDetails && pokemonDetails[stat]}</output>
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className={styles.types}>
                         <h3>Types:</h3>

@@ -179,14 +179,19 @@ export default function CreatePokemon() {
                             {
                                 ['hp', 'attack', 'defense', 'speed', 'height', 'weight'].map(stat => (
                                     <div className={styles.item} key={stat}>
-                                        <label>{stat[0].toUpperCase() + stat.slice(1)}: </label>
+                                        <label className={styles.labelstat}>{stat[0].toUpperCase() + stat.slice(1)}: </label>
                                         <input
                                             className={styles.inputnumber}
-                                            type="number"
+                                            key={stat}
+                                            type="range"
                                             name={stat}
                                             value={input[stat]}
                                             onChange={handleChange}
+                                            min="0"
+                                            max="200"
+                                            step="1"
                                         />
+                                        <output className={styles.outputnumber}>{input[stat]}</output>
                                     </div>
                                 ))
                             }

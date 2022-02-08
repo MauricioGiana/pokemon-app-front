@@ -1,6 +1,6 @@
 .filterscontainer {
     position: fixed;
-    top: 15vh;
+    top: 25vh;
     left: 1vw;
     display: flex;
     flex-direction: column;
@@ -29,11 +29,14 @@
 }
 
 @keyframes slideout1 {
-    from {
-        transform: translateX(calc(1vw + 18em));
+    0% {
+        transform: translateX(-18em);
     }
-    to {
-        transform: translateX(calc((1vw + 18em) * -1));
+    99% {
+        transform: translateX(0%);
+    }
+    100% {
+        display: none;
     }
 }
     
@@ -167,11 +170,13 @@
 .label {
     font-size: 20px;
     font-weight: bold;
+    width: 7em;
 }
 
 .select {
     height: 30px;
     border-radius: 8px;
+    width: 6em;
 }
 
 .select > option {

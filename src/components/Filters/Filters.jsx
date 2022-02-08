@@ -129,62 +129,62 @@ export default function Filters({ endpoint }) {
                 <span className={styles.showfilters}>FILTERS</span>
                 <IoIosArrowDroprightCircle className={showFilters ? styles.invertarrow : styles.arrow} />
             </div>
-                    <div className={showFilters ? styles.filterscontainer : styles.filterscontainerout} >
-                        <div className={styles.title}><span>Filters</span></div>
-                        <div className={styles.divform}>
-                            <form >
-                                <div className={styles.form}>
-                                    <div className={styles.item}>
-                                        <label className={styles.label}>By origin</label>
-                                        <select className={styles.select} onChange={handleSubmit}>
-                                            <option label="select..." />
-                                            <option value="All">All Pokemons</option>
-                                            <option value="Existing">Existing</option>
-                                            <option value="Created">Created</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.item}>
-                                        <label className={styles.label}>By type </label>
-                                        <select className={styles.select} name='type' onChange={handleSubmit}>
-                                            <option label="select..." />
-                                            {
-                                                types.map(type => (
-                                                    <option key={type.id} value={type.name}>{type.name}</option>
-                                                ))
-                                            }
-                                        </select>
-                                    </div>
-                                    <div className={styles.item}>
-                                        <label className={styles.label}>Order by name</label>
-                                        <select className={styles.select} onChange={handleSubmit}>
-                                            <option label="select..." />
-                                            <option value="nameAsc">Ascending</option>
-                                            <option value="nameDes">Descending</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.item} >
-                                        <label className={styles.label}>Order by attack</label>
-                                        <select className={styles.select} onChange={handleSubmit}>
-                                            <option label="select..." />
-                                            <option value="attackAsc">Ascending</option>
-                                            <option value="attackDes">Descending</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.item} >
-                                        <label className={styles.label}>Order by speed</label>
-                                        <select className={styles.select} onChange={handleSubmit}>
-                                            <option label="select..." />
-                                            <option value="speedAsc">Ascending</option>
-                                            <option value="speedDes">Descending</option>
-                                        </select>
-                                    </div>
-                                    <div className={styles.divreset}>
-                                        <input type="button" onClick={handleSubmit} value="Reset Pokemons" />
-                                    </div>
-                                </div >
-                            </form >
+            <div className={showFilters ? styles.filterscontainer : styles.filterscontainerout} >
+                <div className={styles.title}><span>Filters</span></div>
+                <div className={styles.divform}>
+                    <form >
+                        <div className={styles.form}>
+                            <div className={styles.item}>
+                                <label className={styles.label}>By origin</label>
+                                <select className={styles.select} onChange={handleSubmit}>
+                                    <option label="select..." />
+                                    <option value="All">All Pokemons</option>
+                                    <option value="Existing">Existing</option>
+                                    <option value="Created">Created</option>
+                                </select>
+                            </div>
+                            <div className={styles.item}>
+                                <label className={styles.label}>By type </label>
+                                <select className={styles.select} name='type' onChange={handleSubmit}>
+                                    <option label="select..." />
+                                    {
+                                        types.map(type => (
+                                            <option key={type.id} value={type.name}>{type.name}</option>
+                                        ))
+                                    }
+                                </select>
+                            </div>
+                            <div className={styles.item}>
+                                <label className={styles.label}>Order by name</label>
+                                <select className={styles.select} onChange={handleSubmit}>
+                                    <option label="select..." />
+                                    <option value="nameAsc">Ascending</option>
+                                    <option value="nameDes">Descending</option>
+                                </select>
+                            </div>
+                            <div className={styles.item} >
+                                <label className={styles.label}>Order by attack</label>
+                                <select className={styles.select} onChange={handleSubmit}>
+                                    <option label="select..." />
+                                    <option value="attackAsc">Ascending</option>
+                                    <option value="attackDes">Descending</option>
+                                </select>
+                            </div>
+                            <div className={styles.item} >
+                                <label className={styles.label}>Order by speed</label>
+                                <select className={styles.select} onChange={handleSubmit}>
+                                    <option label="select..." />
+                                    <option value="speedAsc">Ascending</option>
+                                    <option value="speedDes">Descending</option>
+                                </select>
+                            </div>
+                            <div className={styles.divreset}>
+                                <input type="button" onClick={handleSubmit} value="Reset Pokemons" />
+                            </div>
                         </div >
-                    </div >
+                    </form >
+                </div >
+            </div >
         </div>
     )
 }

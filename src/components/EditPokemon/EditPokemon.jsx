@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getTypes } from "../../redux/actions";
+import { getTypes, getPokemon } from "../../redux/actions";
 import { editPokemon } from '../../Controllers';
 import styles from './EditPokemon.module.css';
 import PokemonTypes from '../PokemonTypes/PokemonTypes';
@@ -41,7 +41,7 @@ export default function CreatePokemon() {
             }
         }
         fetchData();
-    }, [dispatch, idPokemon, pokemon]);
+    }, [dispatch, idPokemon]);
 
 
     const handleChange = (event) => {
@@ -76,6 +76,7 @@ export default function CreatePokemon() {
         const edit = async () => {
             try {
                 editPokemon(idPokemon, input);
+                await dispatch(getPokemon(idPokemon));
                 navigate(-1)
             } catch (error) {
                 console.log(error);
@@ -140,64 +141,68 @@ export default function CreatePokemon() {
                             </div>
                         </div>
                         <div className={styles.item}>
-                                <div className={styles.types}>
-                                    <input className={styles.showtypes} onClick={handleShowTypes} type="button" value="Types >>" />
-                                    {
-                                        input.types.length > 0 && <div className={styles.selectedtypes}>
-                                            {
-                                                input.types.map(type => (
-                                                    <button
-                                                        key={type}
-                                                        className={styles.typeselected}
-                                                        onClick={addOrQuitType}
-                                                        value={type}
-                                                    >
-                                                        <input type="image" value={type} src={PokemonTypes[type]} alt="" />
-                                                        {type}
-                                                    </button>
-                                                ))
-                                            }
-                                        </div>
-                                    }
-                                    {
-                                        showTypes && <div className={styles.typeslist}>
-                                            {
-                                                typesApi.map(type => (
-                                                    <button
-                                                        key={type.id}
-                                                        className={input.types.find(t => t === type.name) ? styles.typeselected : styles.typebtn}
-                                                        onClick={addOrQuitType}
-                                                        value={type.name}
-                                                    >
-                                                        <input type="image" value={type.name} src={PokemonTypes[type.name]} alt="" />
-                                                        {type.name}
-                                                    </button>
-                                                ))
-                                            }
-                                        </div>
-                                    }
-                                </div>
+                            <div className={styles.types}>
+                                <input className={styles.showtypes} onClick={handleShowTypes} type="button" value="Types >>" />
+                                {
+                                    input.types.length > 0 && <div className={styles.selectedtypes}>
+                                        {
+                                            input.types.map(type => (
+                                                <button
+                                                    key={type}
+                                                    className={styles.typeselected}
+                                                    onClick={addOrQuitType}
+                                                    value={type}
+                                                >
+                                                    <input type="image" value={type} src={PokemonTypes[type]} alt="" />
+                                                    {type}
+                                                </button>
+                                            ))
+                                        }
+                                    </div>
+                                }
+                                {
+                                    showTypes && <div className={styles.typeslist}>
+                                        {
+                                            typesApi.map(type => (
+                                                <button
+                                                    key={type.id}
+                                                    className={input.types.find(t => t === type.name) ? styles.typeselected : styles.typebtn}
+                                                    onClick={addOrQuitType}
+                                                    value={type.name}
+                                                >
+                                                    <input type="image" value={type.name} src={PokemonTypes[type.name]} alt="" />
+                                                    {type.name}
+                                                </button>
+                                            ))
+                                        }
+                                    </div>
+                                }
                             </div>
+                        </div>
                     </div>
                     <div className={styles.group}>
                         {
                             ['hp', 'attack', 'defense', 'speed', 'height', 'weight'].map(stat => (
                                 <div className={styles.item} key={stat}>
-                                    <label>{stat[0].toUpperCase() + stat.slice(1)}: </label>
+                                    <label className={styles.labelstat}>{stat[0].toUpperCase() + stat.slice(1)}: </label>
                                     <input
                                         className={styles.inputnumber}
-                                        type="number"
+                                        type="range"
                                         name={stat}
                                         value={input[stat]}
                                         onChange={handleChange}
+                                        min="0"
+                                        max="200"
+                                        step="1"
                                     />
+                                    <output className={styles.outputnumber}>{input[stat]}</output>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
                 <div className={styles.submit}>
-                        <input type="submit" onSubmit={handleSubmit} value="Save changes" />
+                    <input type="submit" onSubmit={handleSubmit} value="Save changes" />
                 </div>
             </form>
         </div>
