@@ -182,7 +182,6 @@ export default function CreatePokemon() {
                                         <label className={styles.labelstat}>{stat[0].toUpperCase() + stat.slice(1)}: </label>
                                         <input
                                             className={styles.inputnumber}
-                                            key={stat}
                                             type="range"
                                             name={stat}
                                             value={input[stat]}
