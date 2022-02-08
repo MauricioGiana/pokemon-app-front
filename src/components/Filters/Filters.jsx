@@ -155,7 +155,7 @@ export default function Filters({ endpoint }) {
                                 </select>
                             </div>
                             <div className={styles.item}>
-                                <label className={styles.label}>Order by name</label>
+                                <label className={styles.label}>Sort by name</label>
                                 <select className={styles.select} onChange={handleSubmit}>
                                     <option label="select..." />
                                     <option value="nameAsc">Ascending</option>
@@ -163,7 +163,7 @@ export default function Filters({ endpoint }) {
                                 </select>
                             </div>
                             <div className={styles.item} >
-                                <label className={styles.label}>Order by attack</label>
+                                <label className={styles.label}>Sort by attack</label>
                                 <select className={styles.select} onChange={handleSubmit}>
                                     <option label="select..." />
                                     <option value="attackAsc">Ascending</option>
@@ -171,7 +171,7 @@ export default function Filters({ endpoint }) {
                                 </select>
                             </div>
                             <div className={styles.item} >
-                                <label className={styles.label}>Order by speed</label>
+                                <label className={styles.label}>Sort by speed</label>
                                 <select className={styles.select} onChange={handleSubmit}>
                                     <option label="select..." />
                                     <option value="speedAsc">Ascending</option>
