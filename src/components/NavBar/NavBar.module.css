@@ -4,16 +4,14 @@
     align-items: center;
     justify-content: space-between;
     background-color: #7b2cbf;
-    height: 5vw;
+    height: 65px;
     position: sticky;
     top: 0;
     width: 100%;
-    border-bottom: 0.25vw solid #240046;
+    border-bottom: 3px solid #240046;
     box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.3), 3px 6px 20px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-
-
 
 
 .header {
@@ -28,27 +26,33 @@
     flex-direction: column;
     padding-left: 1.5vw;
     color: whitesmoke;
-    width: 20vw;
+    width: 15em;
 }
 
 .maintitle {
-    height: 3vw;
-    font-size: 2vw;
+    height: 38px;
+    width: 100%;
+    font-size: 30px;
     font-weight: bold;
     text-align: start;
-    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
 }
 
 .sectitle {
-    height: 2vw;
-    font-size: 1.5vw;
+    height: 27px;
+    width: 100%;
+    font-size: 22px;
     font-weight: bold;
     text-align: start;
+    display: flex;
+    align-items: flex-start;
 }
 
 .landicon {
-    width: 4vw;
-    height: 4vw;
+    width: 50px;
+    height: 50px;
+    z-index: 6;
 }
 
 .items {
@@ -59,11 +63,15 @@
     width: 35vw;
     height: 100%;
     background-color: #3c096c;
-    font-size: 1.5vw;
+    font-size: 18px;
 }
 
 items Link {
     padding: 1px;
+}
+
+.hideitems {
+    display: none;
 }
 
 .homebtn {
@@ -108,6 +116,7 @@ items Link {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 3px;
 }
 
 .lastbtn1 :hover {
@@ -130,6 +139,10 @@ items Link {
     padding-right: 5px;
 }
 
+.lastbtn2 span {
+    padding: 3px;
+}
+
 .nocurrent {
     display: flex;
     justify-content: center;
@@ -148,6 +161,7 @@ items Link {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 3px;
 }
 
 .nocurrent :hover {
@@ -166,13 +180,77 @@ items Link {
     height: 100%;
     border-left: 2px solid #5a189a;
     border-right: 2px solid #5a189a;
-    padding-left: 5px;
-    padding-right: 5px;
+}
+
+.current span {
+    padding: 3px;
 }
 
 .search {
     margin-right: 30px;
 }
+
+@media (max-width: 1200px) {
+    .items {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 980px) {
+    .title {
+        width: 12em;   
+    }
+    .maintitle {
+        font-size: 22px;
+    }
+    .sectitle {
+        font-size: 16px;
+    }
+    .items {
+        width: 45vw;
+    }
+    .search {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        display: none;   
+    }
+    .items {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .items {
+        width: 55vw;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .items {
+        width: 65vw;
+        font-size: 14px;
+        margin-right: 4vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .items {
+        width: 70vw;
+        font-size: 12px;
+        margin-right: 12vw;
+    }
+    .landicon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
 
 
 

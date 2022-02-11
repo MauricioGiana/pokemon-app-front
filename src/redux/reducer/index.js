@@ -1,7 +1,7 @@
 import {
     GET_POKEMON, GET_POKEMONS, CREATE_POKEMON,
     GET_TYPES, GET_POKEMONS_BY_TYPE, SEARCH_POKEMON,
-    GET_FAVORITES
+    GET_FAVORITES, SHOW_ITEMS
 } from "../actions";
 
 
@@ -13,7 +13,8 @@ const initialState = {
     types: [],
     type: {},
     favorites: [],
-    searchResults: []
+    searchResults: [],
+    showItems: true,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -54,6 +55,11 @@ const rootReducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 favorites: payload
+            };
+        case SHOW_ITEMS:
+            return {
+                ...state,
+                showItems: payload
             };
         default: return state;
     }

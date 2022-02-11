@@ -11,7 +11,7 @@ export const EDIT_POKEMON = 'EDIT_POKEMON';
 export const DELETE_POKEMON = "DELETE_POKEMON";
 export const DELETE_ALL_POKEMONS = "DELETE_ALL_POKEMONS";
 export const GET_FAVORITES = 'GET_FAVORITES';
-
+export const SHOW_ITEMS = 'SHOW_ITEMS';
 
 /* 
 query name
@@ -93,6 +93,13 @@ export const getFavorites = () => {
             type: GET_FAVORITES,
             payload: favorites
         })
+    }
+}
+
+export const showItems = (show) => {
+    return {
+        type: SHOW_ITEMS,
+        payload: show
     }
 }
 

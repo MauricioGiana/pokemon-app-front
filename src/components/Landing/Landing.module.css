@@ -54,3 +54,25 @@
     transition: 0.5s;
     border: #4cc9f0 solid 3px;
 }
+
+@media (max-width: 680px) {
+    .landing {
+        background-image: url('../../assets/images/bg-5.jfif');
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        margin-top: 15vh;
+        position: initial;
+        gap: 35px;
+    }
+    .title > h2 {
+        width: 60vw;
+        margin-top: 25px;
+    }
+    .linkhome {
+        background-color: rgba(76, 201, 240, 0.4);
+        border-radius: 14px;
+    }
+}
