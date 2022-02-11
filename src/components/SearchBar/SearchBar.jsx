@@ -7,7 +7,7 @@ import { showItems } from '../../redux/actions';
 
 export default function SearchBar() {
     const navigate = useNavigate();
-    const [showBar, setShowBar] = useState(true);
+    const [showBar, setShowBar] = useState(false);
     const dispatch = useDispatch();
     useEffect(() => {
         window.addEventListener('resize', () => {
@@ -32,7 +32,7 @@ export default function SearchBar() {
         }
     }
 
-    let classBar = showBar ? styles.searchbar : styles.hidebar;
+    let classBar = showBar || window.innerWidth > 600 ? styles.searchbar : styles.hidebar;
     let classX = window.innerWidth < 601 && showBar ? styles.searchx : styles.hidex;
     let classDiv;
     if (window.innerWidth < 601) {
@@ -53,7 +53,7 @@ export default function SearchBar() {
                 window.innerWidth < 601 && !showBar && <FcSearch onClick={handleShow} className={styles.iconphone} />
             }
             {
-                showBar && <div className={classDiv}>
+                showBar || window.innerWidth > 600 && <div className={classDiv}>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.bar}>
                         <input className={classBar} type="search" onChange={handleChange} placeholder=" search pokemon..." />
