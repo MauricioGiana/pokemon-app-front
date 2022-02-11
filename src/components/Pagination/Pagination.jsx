@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import styles from './Pagination.module.css';
+import { useEffect, useState } from 'react';
 
 
 export default function Pagination({endpoint, currentPage, totalPages}) {
@@ -58,9 +59,25 @@ const prevPage = (event) => {
     } else navigate(`/pokemons?page=${pageNumber}`);
   }
 
+  const [firspagevalue, setFirstPageValue] = useState("First Page");
+  const [lastpagevalue, setLastpagevalue] = useState("Last Page");
+  
+  useEffect(() => {
+    window.addEventListener("resize", (event) => {
+      if (window.innerWidth < 601) {
+        setFirstPageValue("<<");
+        setLastpagevalue(">>");
+      } else {
+        setFirstPageValue("First Page");
+        setLastpagevalue("Last Page");
+      }
+    });
+  }, [firspagevalue, lastpagevalue]);
+
   return (
+    <div className={styles.divpagination}>
     <div className={styles.container}>
-      <input className={styles.firstlast} type="button" value="First Page" onClick={firstPage} />
+      <input className={styles.firstlast} type="button" value={firspagevalue} onClick={firstPage} />
       <input className={styles.prevnext} type="button" value="<" onClick={prevPage} />
       <div className={styles.divpages }>
       {
@@ -84,7 +101,8 @@ const prevPage = (event) => {
       }
       </div>
       <input className={styles.prevnext} type="button" value=">" onClick={nextPage} />
-      <input className={styles.firstlast} type="button" value="Last Page" onClick={lastPage} />
+      <input className={styles.firstlast} type="button" value={lastpagevalue} onClick={lastPage} />
+    </div>
     </div>
   )
 }

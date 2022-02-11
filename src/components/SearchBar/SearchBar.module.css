@@ -15,8 +15,8 @@
     right: 0;
     height: 65px;
     width: 90vw;
-    /* background: linear-gradient(to right, rgb(123, 44, 191), rgb(35, 8, 59,) 60%); */
-    background-color: rgb(123, 44, 191);
+    background: linear-gradient(to left, rgb(51, 7, 90), rgb(123, 44, 191) 50%);
+    /* background-color: rgb(123, 44, 191); */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -68,10 +68,17 @@
 }
 
 .searchx {
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
-    right: 30px;
-    color: red;
+    right: 34px;
+    color: rgb(83, 8, 8);
+    background-color: rgb(156, 114, 192);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidex {
