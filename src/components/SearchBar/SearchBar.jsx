@@ -53,7 +53,7 @@ export default function SearchBar() {
                 window.innerWidth < 601 && !showBar && <FcSearch onClick={handleShow} className={styles.iconphone} />
             }
             {
-                showBar || window.innerWidth > 600 && <div className={classDiv}>
+                (showBar || window.innerWidth > 600) && <div className={classDiv}>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.bar}>
                         <input className={classBar} type="search" onChange={handleChange} placeholder=" search pokemon..." />
