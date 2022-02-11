@@ -42,19 +42,15 @@ export default function Home() {
 
     return (
         <div className={styles.home}>
-            <div className={styles.content}>
-                <div className={styles.filters}>
-                    <Filters endpoint={endpoint} />
-                </div>
+            <Filters endpoint={endpoint} />
+            <div className={styles.pokemons}>
+                <p className={styles.title}>Pokemons</p>
                 <div className={styles.pokemons}>
-                    <p className={styles.title}>Pokemons</p>
-                    <div className={styles.pokemons}>
                     <Pokemons />
-                    </div>
-                    {
-                        totalPages > 1 && <Pagination endpoint={endpoint} currentPage={currentPage} totalPages={totalPages} />
-                    }
                 </div>
+                {
+                    totalPages > 1 && <Pagination endpoint={endpoint} currentPage={currentPage} totalPages={totalPages} />
+                }
             </div>
         </div>
     );

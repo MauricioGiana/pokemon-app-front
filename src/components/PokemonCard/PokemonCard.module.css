@@ -4,9 +4,9 @@
 .pokemoncard {
     display: flex;
     flex-direction: column;
-    border-radius: 1.5vw;
-    border: 0.5vw solid;
-    border-color: #0d1516;
+    border-radius: 20px;
+    border: 8px solid;
+    border-color: rgb(41, 9, 75);
     width: 17vw;
     box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.3), 3px 6px 20px 0 rgba(0, 0, 0, 0.2);
     animation: slidein 0.5s;
@@ -31,10 +31,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    height: 5.5vw;
     background-color: #38413f;
-    border-top-left-radius: 1vw;
-    border-top-right-radius: 1vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: white;
     transition: 0.3s;
 }
@@ -112,8 +111,7 @@
     align-items: center;
     justify-content: center;
     height: 14vw;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 7px;
     background: linear-gradient(to bottom, rgba(97, 61, 193, 0.7), rgba(255, 255, 255, 0.7) 50%);
 }
 .pokeimg {
@@ -130,8 +128,8 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(56, 65, 63);
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 100%;
 }
 
@@ -139,13 +137,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: bold;
     border-bottom: 1px solid #cbb2fe;
     color: whitesmoke;
     padding-top: 1px;
     padding-bottom: 1px;
 }
+
 
 .divtype {
     display: flex;
@@ -170,5 +169,74 @@
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
     color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+    .pokemoncard {
+        width: 40vw;
+    }
+    .divHead {
+        height: unset;
+    }
+    .divTitle {
+        height: 10vh;
+    }
+    .name {
+        font-size: 150%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .longname {
+        font-size: 110%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .customIcon {
+        width: 3vh;
+        height: 3vh;
+        padding-left: 10px;
+        padding-top: 8px;
+    }
+    .favIcon {
+        width: 3.2vh;
+        height: 3.2vh;
+        padding-right: 10px;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    .favIconOn {
+        width: 3.2vh;
+        height: 3.2vh;
+        padding-right: 10px;
+        margin-top: 8px;
+        cursor: pointer;
+        color: yellow
+    }
+    .divImg {
+        height: 25vh;
+    }
+    .pokeimg {
+        max-height: 100%;
+        max-width: 100%;
+        transition: 0.4s;
+    }
+    .divTypes {
+        height: 6.3vh;
+    }
+    .types {
+        display: none;
+    }
+    .divtype {
+        flex-direction: column;
+    }
+    .divtype > img {
+        height: 2.7vh;
+        width: 2.7vh;
+    }
+    .typesContainer {
+        font-size: 1.4vh;
+        width: 100%;
+        height: 100%;
+    }
 }
 

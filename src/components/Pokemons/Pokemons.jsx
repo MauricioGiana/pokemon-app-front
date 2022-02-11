@@ -31,7 +31,7 @@ export default function Pokemons({ specificPokemons }) {
     if (!pokemons.length) return <h2>No pokemons found</h2>
 
     return (
-        <div className={styles.pokemon}>
+        <div className={styles.pokemons}>
             {
                 pokemons?.map((pokemon) => {
                     return <PokemonCard

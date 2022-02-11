@@ -43,7 +43,7 @@
 
 .show1 {
     position: fixed;
-    top: 50vh;
+    top: 40vh;
     left: 1vw;
     z-index: 2;
     display: flex;
@@ -64,7 +64,7 @@
 
 .show2 {
     position: fixed;
-    top: 50vh;
+    top: 40vh;
     left: calc(2.3vw + 18em);
     z-index: 2;
     cursor: pointer;

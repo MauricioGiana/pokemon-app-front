@@ -59,20 +59,19 @@ const prevPage = (event) => {
     } else navigate(`/pokemons?page=${pageNumber}`);
   }
 
+  let innerWidth = window.innerWidth;
   const [firspagevalue, setFirstPageValue] = useState("First Page");
   const [lastpagevalue, setLastpagevalue] = useState("Last Page");
   
   useEffect(() => {
-    window.addEventListener("resize", (event) => {
-      if (window.innerWidth < 601) {
-        setFirstPageValue("<<");
-        setLastpagevalue(">>");
-      } else {
-        setFirstPageValue("First Page");
-        setLastpagevalue("Last Page");
-      }
-    });
-  }, [firspagevalue, lastpagevalue]);
+    if (innerWidth > 600) {
+      setFirstPageValue("First Page");
+      setLastpagevalue("Last Page");
+    } else {
+      setFirstPageValue("<<");
+      setLastpagevalue(">>");
+    }
+  }, [firspagevalue, lastpagevalue, innerWidth]);
 
   return (
     <div className={styles.divpagination}>

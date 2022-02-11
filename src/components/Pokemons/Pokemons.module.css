@@ -1,5 +1,12 @@
-.pokemon {
+.pokemons {
     display: inline-grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .pokemons {
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
 }
