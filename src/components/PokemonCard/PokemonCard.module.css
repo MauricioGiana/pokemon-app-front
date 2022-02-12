@@ -182,7 +182,7 @@
         height: 18vw;
     }
     .name {
-        font-size: 5vw;
+        font-size: 4.5vw;
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -213,7 +213,7 @@
         color: yellow
     }
     .divImg {
-        height: 25vh;
+        height: 40vw;
     }
     .pokeimg {
         max-height: 100%;

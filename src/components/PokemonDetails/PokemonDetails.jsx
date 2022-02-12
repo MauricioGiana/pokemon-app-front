@@ -58,14 +58,14 @@ const PokemonDetails = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <input className="back" type="button" value="<< Back" onClick={() => navigate(-1)} />
-                    <h2>{pokemonDetails.name}</h2>
+                    <span className={styles.title}>{pokemonDetails.name}</span>
                 </div>
                 <div className={styles.details}>
                     <div className={styles.divimg}>
                         <img src={pokemonDetails.image} alt={pokeBall} />
                     </div>
                     <div className={styles.info}>
-                        <h3>Stats: </h3>
+                        <span className={styles.subtitle}>Stats: </span>
                         {
                             ['hp', 'attack', 'defense', 'speed', 'height', 'weight'].map(stat => (
                                 <div className={styles.stat} key={stat}>
@@ -85,7 +85,7 @@ const PokemonDetails = () => {
                         }
                     </div>
                     <div className={styles.types}>
-                        <h3>Types:</h3>
+                        <span className={styles.subtitle}>Types:</span>
                         <div className={styles.typeslist}>
                             {pokemonDetails.types?.map(type => (
                                 <div key={type.id} className={styles.divtype}>

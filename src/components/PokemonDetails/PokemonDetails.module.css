@@ -67,7 +67,7 @@
 }
 
 
-.header h2 {
+.title {
     font-size: 3.5vw;
     color: whitesmoke;
 }
@@ -168,5 +168,134 @@
 
 .divtype > img {
     width: 1.7vw;
+}
+
+@media (max-width: 600px) {
+    .pokemondetails {
+        align-items: flex-start;
+        background-image: url("../../assets/images/gb-9.jfif");
+    }
+    .container{
+        width: 90vw;
+        border-radius: 3vw;
+        border: solid #2f0258 2px;
+        margin-top: 3vh;
+    }
+    .editbtn {
+        font-size: 4vw;
+        height: 10vw;
+        width: 35vw;
+        border-radius: 10px;
+    }
+    
+    .deletebtn {
+        font-size: 4vw;
+        height: 10vw;
+        width: 35vw;
+        border-radius: 10px;
+    }
+    .custombtn {
+        gap: 10vw;
+    }
+    .header {
+        width: 85vw;
+        height: 5vw;
+        padding-top: 10px;
+        justify-content: flex-start;
+    }
+    
+    .title {
+        font-size: 6vw;
+        margin-left: 13vw;
+    }
+    
+    .header input {
+        width: 12vw;
+        height: 7vw;
+        font-size: 2vw;
+    }
+    
+    .details {
+        flex-direction: column;
+        align-items: center;
+        width: 85vw;
+        max-height: 65vh;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        border: none;
+        width: 80vw;
+        border-top: 2px solid #9fa0ff;
+        padding-top: 10px;
+    }
+
+    .subtitle {
+        font-size: 6vw;
+    }
+    
+    .stat {
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+        width: 75vw;
+    }
+    
+    .statname {
+        width: 25vw;
+    }
+    
+    .range {
+        width: 45vw;
+    }
+    
+    .types {
+        width: 75vw;
+        margin-left: 0;
+        flex-direction: row;
+        gap: 6vw;
+        border-top: 2px solid #9fa0ff;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .typeslist {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: unset;
+        height: 10vh;
+    }
+    
+    .divimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 40vw;
+        height: 40vw;
+    }
+    
+    .divimg img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    
+    .divtype {
+        flex-direction: column;
+        width: 12vw;
+        height: 10vw;
+        font-size: 4vw;
+        padding: 4px;
+        background: none;
+        border: none;
+    }
+    
+    .divtype > img {
+        width: 7vw;
+    }
 }
 
