@@ -143,6 +143,7 @@
     border-radius: 1vw;
     cursor: pointer;
     margin-bottom: 1.5vw;
+    position: relative;
 }
 
 .showtypes:hover {
@@ -154,7 +155,8 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 15px;
-    width: 350px;
+    width: 7vw;
+    position: relative;
 }
 
 .selectedtypes {
@@ -167,8 +169,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5vw;
     position: absolute;
-    left: 32vw;
-    bottom: 16vh;
+    left: 7vw;
     background-color: rgba(36, 0, 70, 0.8);
     padding: 0.7vw;
     border-radius: 2vw;

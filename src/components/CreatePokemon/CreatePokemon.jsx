@@ -103,10 +103,10 @@ export default function CreatePokemon() {
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.formbody}>
                         <div className={styles.group}>
-                            <div className={styles.item}>
+                            <div className={styles.nameitem}>
                                 <label>Name: </label>
                                 <input
-                                    className={styles.input}
+                                    className={styles.inputname}
                                     type="text"
                                     name="name"
                                     value={input.name}

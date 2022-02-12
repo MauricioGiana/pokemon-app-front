@@ -72,6 +72,12 @@
     color: whitesmoke;
 }
 
+.subtitle {
+    font-size: 2vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .header input {
     width: 10%;
     height: 50%;
@@ -89,7 +95,7 @@
     color: whitesmoke;
     border-top: 2px solid #9fa0ff;
     margin-top: 15px;
-    max-height: 50vh;
+    height: auto;
 }
 
 .info {
@@ -97,9 +103,9 @@
     flex-direction: column;
     align-items: center;
     width: 25vw;
-    height: 50vh;
     gap: 12px;
     border-right: 2px solid #9fa0ff;
+    padding-bottom: 20px;
 }
 
 .stat {
@@ -174,7 +180,7 @@
     .pokemondetails {
         align-items: flex-start;
         background-image: url("../../assets/images/gb-9.jfif");
-        height: auto;
+        height: 100vh;
     }
     .container{
         width: 90vw;

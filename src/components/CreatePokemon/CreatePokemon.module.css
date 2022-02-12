@@ -56,7 +56,22 @@
 
 .formbody {
     display: flex;
-    align-items: flex-start;
+}
+
+.nameitem {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.inputname {
+    height: 2vw;
+    width: 20vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .item {
@@ -67,7 +82,13 @@
     font-weight: bold;
 }
 
-
+.input {
+    height: 2vw;
+    width: 18vw;
+    font-size: 15;
+    border-radius: 5px;
+    border: 1px solid black;
+}
 
 .item input {
     font-size: 1.5vw;
@@ -89,8 +110,7 @@
 .group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-start;
     gap: 20px;
 }
 
@@ -115,6 +135,7 @@
     justify-content: flex-start;
     gap: 15px;
     width: 350px;
+    position: relative;
 }
 
 .selectedtypes {
@@ -127,11 +148,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5vw;
     position: absolute;
-    left: 33.5vw;
-    bottom: 31.5vh;
+    left: 7vw;
     background-color: rgba(36, 0, 70, 0.8);
     padding: 0.7vw;
     border-radius: 2vw;
+    border-top-left-radius: 0;
 }
 
 .typebtn {
@@ -142,10 +163,7 @@
     border-radius: 1vw;
     border: 0.1vw solid whitesmoke;
     background-color: #b185db;
-    width: 110px;
     transition: 0.5s;
-    width: 8vw;
-    height: 1.8vw;
     font-size: 1.2vw;
     cursor: pointer;
 }
@@ -190,14 +208,6 @@
     padding-bottom: 10px;
 }
 
-
-.input {
-    height: 2vw;
-    width: 18vw;
-    font-size: 15;
-    border-radius: 5px;
-    border: 1px solid black;
-}
 
 .imagebox {
     display: flex;
@@ -274,9 +284,7 @@
     }
 }
 
-@media (max-width: 980px) {
-    .typeslist {
-        left: 34%;
-        bottom: 20%;
-    }
+
+@media (max-width: 600px) {
+
 }
