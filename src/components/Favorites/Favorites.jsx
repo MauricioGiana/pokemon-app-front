@@ -48,11 +48,11 @@ const Favorites = () => {
         <div className={styles.favorites}>
             <div className={styles.header}>
                 <div className={styles.main}>
-                    <input className="back" type="button" value="Back" onClick={() => navigate('/pokemons')} />
-                    <h1 className={styles.title}>Favorites</h1>
+                    <input className={styles.backbtn} type="button" value="Back" onClick={() => navigate('/pokemons')} />
+                    <span className={styles.title}>Favorites</span>
                 </div>
                 {
-                    !loading && favorites.length > 0 && <input className="delete" type="button" value="Delete all favorites" onClick={handleDeleteAll} />
+                    !loading && favorites.length > 0 && <input className={styles.deletebtn} type="button" value="Delete all favorites" onClick={handleDeleteAll} />
                 }
             </div>
             {

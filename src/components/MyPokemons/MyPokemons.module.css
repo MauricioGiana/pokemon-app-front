@@ -7,9 +7,11 @@
     min-height: calc(100vh - 5.25vw);
 }
 
-h1 {
+.title {
     font-size: 4vw;
     text-shadow: whitesmoke 0 0 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .header {
@@ -25,21 +27,26 @@ h1 {
     padding-bottom: 30px;
 }
 
-.header input {
-    width: 14vw;
-    height: 2.5vw;
+.backbtn {
+    height: 35px;
+    width: 100px;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    cursor: pointer;
+    background-color: #7b2cbf;
+    color: whitesmoke;
     font-size: 1.2vw;
 }
 
-.header input:hover {
+.backbtn:hover {
     background-color: #240046;
 }
 
 .deletebtn {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     height: 2.3vw;
     width: 13vw;
-    border-radius: 1vw;
+    border-radius: 14px;
     cursor: pointer;
     background-color: #800c0e;
     color: whitesmoke;
@@ -47,5 +54,34 @@ h1 {
 }
 
 .deletebtn:hover {
-    background-color: #a4161a;
+    background-color: #be252a;
+}
+
+
+@media (max-width: 600px) {
+    .mypokemons {
+        background-image: url("../../assets/images/gb-7.jfif");
+    }
+    .header {
+        width: 95vw;
+        border-bottom: 1.5px solid rgb(56, 4, 71);
+        padding-bottom: 10px;
+    }
+    .title {
+        font-size: 7vw;
+        padding-bottom: 10px;
+    }
+    .pokemons {
+        padding-top: 10px;
+    }
+    .backbtn {
+        width: 20vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+    .deletebtn {
+        font-size: 2.3vw;
+        height: 10vw;
+        width: 25vw;
+    }
 }

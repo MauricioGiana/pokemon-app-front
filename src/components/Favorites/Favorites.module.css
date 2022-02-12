@@ -18,6 +18,12 @@
     text-shadow: whitesmoke 0 0 10px;
 }
 
+.title {
+    font-size: 4vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .main {
     display: flex;
     justify-content: space-between;
@@ -25,21 +31,26 @@
     gap: 8vw;
 }
 
-.header input {
-    width: 13vw;
-    height: 2.5vw;
+.backbtn {
+    height: 35px;
+    width: 100px;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    cursor: pointer;
+    background-color: #7b2cbf;
+    color: whitesmoke;
     font-size: 1.2vw;
 }
 
-.header input:hover {
+.backbtn:hover {
     background-color: #240046;
 }
 
 .deletebtn {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     height: 2.3vw;
     width: 13vw;
-    border-radius: 1vw;
+    border-radius: 14px;
     cursor: pointer;
     background-color: #800c0e;
     color: whitesmoke;
@@ -47,9 +58,36 @@
 }
 
 .deletebtn:hover {
-    background-color: #a4161a;
+    background-color: #be252a;
 }
 
 .pokecontainer {
     padding-bottom: 30px;
 }
+
+@media (max-width: 600px) {
+    .favorites {
+        background-image: url("../../assets/images/bg-8.jfif");
+    }
+    .header {
+        width: 95vw;
+        border-bottom: 1.5px solid whitesmoke;
+        margin-bottom: 10px;
+    }
+    .title {
+        font-size: 9vw;
+    }
+    .main {
+        gap: 5vw;
+    }
+    .backbtn {
+        width: 20vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+    .deletebtn {
+        font-size: 2.5vw;
+        height: 10vw;
+        width: 25vw;
+    }
+} 
