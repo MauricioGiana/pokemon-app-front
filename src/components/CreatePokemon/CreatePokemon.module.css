@@ -286,5 +286,7 @@
 
 
 @media (max-width: 600px) {
-
+    .formbody {
+        flex-direction: column;
+    }
 }
