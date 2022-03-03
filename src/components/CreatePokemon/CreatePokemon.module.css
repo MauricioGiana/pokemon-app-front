@@ -233,8 +233,8 @@
 
 .clear {
     cursor: pointer;
-    color: red;
-    background-color: #c9c5cf;
+    color: rgb(226, 193, 193);
+    background-color: #1c0d33;
     border-radius: 50%;
     width: 20px;
     font-size: 15px;
@@ -443,7 +443,7 @@
     }
     
     .typeselected input {
-        width: 12px;
+        width: 15px;
     }
     
     .selectedtypes {
