@@ -29,8 +29,6 @@
 }
 
 .header h1 {
-    display: flex;
-    align-items: center;
     font-size: 4vw;
     font-weight: bold;
     text-shadow: whitesmoke 0 0 10px;
@@ -90,11 +88,6 @@
     border: 1px solid black;
 }
 
-.item input {
-    font-size: 1.5vw;
-    border-radius: 5px;
-}
-
 .labelstat {
     width: 8vw;
 }
@@ -115,14 +108,14 @@
 }
 
 .showtypes {
-    width: 7vw;
-    height: 2vw;
+    width: 100px;
+    height: 30px;
     background-color: #240046;
-    border: 1px solid whitesmoke;
+    border: 2.5px solid whitesmoke;
     color: whitesmoke;
-    border-radius: 1vw;
+    border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 1.5vw;
+    margin-bottom: 20px;
 }
 
 .showtypes:hover {
@@ -130,12 +123,9 @@
 }
 
 .types {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
-    width: 350px;
-    position: relative;
 }
 
 .selectedtypes {
@@ -146,12 +136,13 @@
 .typeslist {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5vw;
+    gap: 10px;
     position: absolute;
-    left: 7vw;
+    left: 100px;
+    top: 0;
     background-color: rgba(36, 0, 70, 0.8);
-    padding: 0.7vw;
-    border-radius: 2vw;
+    padding: 10px;
+    border-radius: 15px;
     border-top-left-radius: 0;
 }
 
@@ -159,13 +150,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3px;
-    border-radius: 1vw;
-    border: 0.1vw solid whitesmoke;
+    gap: 6px;
+    border-radius: 10px;
+    border: 1.5px solid whitesmoke;
     background-color: #b185db;
     transition: 0.5s;
-    font-size: 1.2vw;
+    font-size: 15px;
     cursor: pointer;
+    width: 100px;
+    height: 25px;
 }
 
 .divtype {
@@ -178,35 +171,32 @@
 }
 
 .typebtn  input {
-    width: 1.4vw;
+    width: 15px;
 }
 
 .typeselected {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3px;
+    gap: 6px;
     cursor: pointer;
-    border-radius: 1vw;
-    border: 0.1vw solid #ff8500;
+    border-radius: 10px;
+    border: 1.5px solid #ff8500;
     background-color: #35034f;
-    width: 8vw;
-    height: 1.8vw;
+    width: 100px;
+    height: 25px;
     color: whitesmoke;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 
 .typeselected input {
-    width: 1.4vw;
+    width: 15px;
 }
 
 .typeselected:hover {
     background-color: #6a040f;
 }
 
-.selectedtypes {
-    padding-bottom: 10px;
-}
 
 
 .imagebox {
@@ -221,7 +211,7 @@
 }
 
 .inputimg {
-    height: 13vh;
+    height: 90px;
     width: 12vw;
     font-size: 1.5vh;
     border-radius: 5px;
@@ -232,17 +222,25 @@
 .itemimg {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     gap: 8px;
+}
+
+.inputimgbox {
+    position: relative;
+    width: 100%;
 }
 
 .clear {
     cursor: pointer;
     color: red;
+    background-color: #c9c5cf;
+    border-radius: 50%;
     width: 20px;
     font-size: 15px;
-    position: relative;
-    top: 10vh;
-    right: 2.8vw;
+    position: absolute;
+    top: 5px;
+    right: 18px;
 }
 
 .itemimg img {
@@ -285,8 +283,207 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 815px) {
+    .header {
+        width: 90vw;
+    }
+    
+    .header input {
+        margin-right: 6vw;
+        width: 20%;
+        font-size: 70%;
+    }
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .container {
+        width: 95vw;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+    }
+    .form {
+        width: 100%;
+    }
+
     .formbody {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .nameitem {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 15px;
+        width: 100%;
+        height: 20px;
+    }
+    
+    .inputname {
+        height: 100%;
+        width: 70%;
+        font-size: 15px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    .imagebox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        font-size: 15px;
+        font-weight: bold;
+        gap: 8px;
+    }
+    
+    .inputimg {
+        height: 40px;
+        width: 100%;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+    
+    .itemimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 70%;
+    }
+    
+    .clear {
+        right: 5px;
+    }
+
+    .imgcontainer {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+    
+    .imgcontainer img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 5px;
+    }
+
+    .types {
+        position: relative;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .showtypes {
+        width: 100px;
+        height: 35px;
+        background-color: #1b0033;
+        border: 2.5px solid whitesmoke;
+        border-radius: 10px;
+        margin: 0;
+    }
+    
+    .selectedtypes {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .typeslist {
+        gap: 10px;
+        left: 0;
+        top: 35px;
+        padding: 10px;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+    }
+    
+    .typebtn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        border: 1.5px solid whitesmoke;
+        font-size: 12px;
+        width: 70px;
+        height: 25px;
+    }
+    
+    .divtype {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .typebtn  input {
+        width: 12px;
+    }
+    
+    .typeselected {
+        border-radius: 10px;
+        border: 1.5px solid #ff8500;
+        width: 70px;
+        height: 25px;
+        color: whitesmoke;
+        font-size: 12px;
+    }
+    
+    .typeselected input {
+        width: 12px;
+    }
+    
+    .selectedtypes {
+        padding: 0;
+    }
+    
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .item > input {
+        height: 100%;
+        width: 60%;
+    }
+    
+    .labelstat {
+        padding-right: 20px;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        width: 100%;
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .submit input {
+        height: 100%;
+        width: 70%;
+        font-size: 20px;
+        border-radius: 15px;
+        border: 2px solid whitesmoke;
     }
 }
