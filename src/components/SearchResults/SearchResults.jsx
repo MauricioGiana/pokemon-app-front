@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import { searchPokemon } from "../../Controllers";
 import Pokemons from "../Pokemons/Pokemons";
+import styles from "./SearchResults.module.css";
 
 export default function SearchResults() {
     const { search } = useLocation();
@@ -17,12 +18,12 @@ export default function SearchResults() {
                 setLoading(false);
             };
             fetchData();
-        }   catch (error) {
+        } catch (error) {
             console.log(error);
         }
     }, [name]);
 
-    
+
     if (loading) {
         return <div>Loading results...</div>
     }
@@ -32,9 +33,13 @@ export default function SearchResults() {
     }
 
     return (
-        <div>
-            <h2>Search results: </h2>
-            <Pokemons specificPokemons={searchResults} />
+        <div className={styles.results}>
+            <div className={styles.container}>
+                <h2 className={styles.title}>Search results: </h2>
+                <div className={styles.pokemons}>
+                    <Pokemons specificPokemons={searchResults} />
+                </div>
+            </div>
         </div>
     )
 }
