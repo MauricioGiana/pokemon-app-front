@@ -40,3 +40,10 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 600px) {
+    .results {
+        background-size: contain;
+        background-position: 30% top;
+    }
+}

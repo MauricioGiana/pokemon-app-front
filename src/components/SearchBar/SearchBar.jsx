@@ -24,6 +24,7 @@ export default function SearchBar() {
             setStyleNames({
                 ...styleNames,
                 x: styles.hidden,
+                hidebtn: styles.hidebtn,
             });
             navigate("/pokemons");
         } else {
