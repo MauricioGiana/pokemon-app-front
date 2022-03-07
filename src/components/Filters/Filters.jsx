@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { getTypes, getPokemons } from '../../redux/actions';
 import styles from './Filters.module.css';
-import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 export default function Filters({ endpoint }) {
     const navigate = useNavigate();
