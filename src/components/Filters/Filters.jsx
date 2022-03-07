@@ -9,7 +9,6 @@ export default function Filters({ endpoint }) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [loadingTypes, setLoadingTypes] = useState(true);
-    const [showFilters, setShowFilters] = useState(false);
 
 
     useEffect(() => {
@@ -114,22 +113,35 @@ export default function Filters({ endpoint }) {
         };
     }
 
-
-    const handleShowFilters = (e) => {
+    const toggleFilters = (e) => {
         e.preventDefault();
-        setShowFilters(!showFilters);
+        const toggle = async () => {
+            const filterscontainer = await document.getElementById('filterscontainer');
+            const filtersbtn = await document.getElementById('filtersbtn');
+            if (!filterscontainer.classList.contains(styles.slidein)) {
+                filterscontainer.classList.remove(styles.slideout);
+                filterscontainer.classList.add(styles.slidein);
+                filtersbtn.classList.remove(styles.slideoutbtn);
+                filtersbtn.classList.add(styles.slideinbtn);
+            } else {
+                filterscontainer.classList.replace(styles.slidein, styles.slideout);
+                filtersbtn.classList.replace(styles.slideinbtn, styles.slideoutbtn);
+            }
+        }
+        toggle();
     }
+
 
     if (loadingTypes) return <h3>Loading types...</h3>;
 
 
     return (
         <div className={styles.filters}>
-            <div className={showFilters ? styles.show2 : styles.show1} onClick={handleShowFilters} >
+            <div id="filtersbtn" className={styles.filtersbtn} onClick={toggleFilters} >
                 <span className={styles.showfilters}>FILTERS</span>
-                <IoIosArrowDroprightCircle className={showFilters ? styles.invertarrow : styles.arrow} />
+                <IoIosArrowDroprightCircle className={styles.arrow} />
             </div>
-            <div className={showFilters ? styles.filterscontainer : styles.filterscontainerout} >
+            <div id="filterscontainer" className={styles.filterscontainer}>
                 <div className={styles.title}><span>Filters</span></div>
                 <div className={styles.divform}>
                     <form >

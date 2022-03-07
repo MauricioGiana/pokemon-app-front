@@ -1,90 +1,90 @@
+.filtersbtn {
+    position: fixed;
+    top: 45vh;
+    left: 15px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slideinbtn {
+    transform: translateX(18.5em);
+    animation: slideinbtn 0.5s;
+}
+
+.slideoutbtn {
+    animation: slideoutbtn 0.5s;
+}
+
+@keyframes slideinbtn {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(18.5em);
+    }
+}
+
+@keyframes slideoutbtn {
+    from {
+        transform: translateX(18.5em);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 .filterscontainer {
     position: fixed;
     top: 25vh;
-    left: 1vw;
+    left: -19.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(60, 9, 108, 0.9);
-    padding: 1vw;
-    border-radius: 1.8vw;
-    border: 0.3vw solid whitesmoke;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: 0.25em solid whitesmoke;
     z-index: 1;
     width: 18em;
-    animation: slidein1 0.5s;
 }
 
-.filterscontainerout {
+
+.slidein {
+    transform: translateX(calc(19.5em + 15px));
+    animation: slidein 0.5s;
+}
+
+.slideout {
+    transform: translateX(calc(-19.5em - 15px));
+    animation: slideout 0.55s;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(19.5em + 15px));
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: translateX(calc(19.5em + 15px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hidden {
     display: none;
 }
-
-@keyframes slidein1 {
-    from {
-        transform: translateX(-18em);
-    }
-    to {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes slideout1 {
-    0% {
-        transform: translateX(-18em);
-    }
-    99% {
-        transform: translateX(0%);
-    }
-    100% {
-        display: none;
-    }
-}
-    
-
-.show1 {
-    position: fixed;
-    top: 40vh;
-    left: 1vw;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-@keyframes slideout2 {
-    from {
-        transform: translateX(calc(2.3vw + 18em));
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.show2 {
-    position: fixed;
-    top: 40vh;
-    left: calc(2.3vw + 18em);
-    z-index: 2;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    animation: slidein2 0.5s;
-}
-
-@keyframes slidein2 {
-    from {
-        transform: translateX(calc((2.3vw + 18em) * -1));
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-
 
 .showfilters {
     writing-mode: vertical-lr;
@@ -92,6 +92,7 @@
     background-color: #240046;
     color: whitesmoke;
     padding: 3px;
+    padding-top: 10px;
     border-radius: 4px;
     width: 3vh;
     height: 13vh;
@@ -99,17 +100,17 @@
 }
 
 .arrow {
-    width: 1.7vw;
-    height: 1.7vw;
-    margin-left: -0.6vw;
+    width: 20px;
+    height: 30px;
+    margin-left: -8px;
     color: #240046;
     z-index: 2;
 }
 
 .invertarrow {
-    width: 1.7vw;
-    height: 1.7vw;
-    margin-left: -0.6vw;
+    width: 20px;
+    height: 30px;
+    margin-left: -8px;
     color: #240046;
     z-index: 2;
     transform: rotate(180deg);
