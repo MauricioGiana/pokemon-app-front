@@ -7,62 +7,76 @@ import { showItems } from '../../redux/actions';
 
 export default function SearchBar() {
     const navigate = useNavigate();
+    const [searchWord, setSearchWord] = useState('');
     const [showBar, setShowBar] = useState(false);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            setShowBar(window.innerWidth > 600);
-        });
-    }, [showBar]);
+    const [styleNames, setStyleNames] = useState({
+        iconphone: styles.iconphone,
+        x: styles.hidden,
+        hidebtn: styles.hidebtn,
+        bar: styles.bar,
+        divBar: styles.divbar,
+    });
 
     const handleChange = (event) => {
         const { value } = event.target;
-        if (!value || !value.length) navigate("/pokemons");
-        else navigate(`/pokemons?search=${value}`);
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
+        setSearchWord(value);
+        if (!value.length) {
+            setStyleNames({
+                ...styleNames,
+                x: styles.hidden,
+            });
+            navigate("/pokemons");
+        } else {
+            setStyleNames({
+                ...styleNames,
+                x: styles.x,
+                hidebtn: styles.hidden,
+            });
+            navigate(`/pokemons?search=${value}`);
+        };
     }
 
     const handleShow = (e) => {
         e.preventDefault();
-        if (window.innerWidth < 601) {
-            setShowBar(!showBar);
-        }
-    }
+        setStyleNames({
+            ...styleNames,
+            iconphone: styles.hidden,
+            divBar: styles.divbarphone,
+            hidebtn: styles.hidebtn,
+        })
+    };
 
-    let classBar = showBar || window.innerWidth > 600 ? styles.searchbar : styles.hidebar;
-    let classX = window.innerWidth < 601 && showBar ? styles.searchx : styles.hidex;
-    let classDiv;
-    if (window.innerWidth < 601) {
-        classDiv = showBar ? styles.divbarphone : styles.hidediv;
-    }   else {
-        classDiv = styles.divbar;
-    }
-    let classIcon;
-    if (window.innerWidth < 601 && showBar) {
-        classIcon = styles.hideicon;
-    }   else {
-        classIcon = styles.searchicon;
-    }
+    const handleHide = (e) => {
+        e.preventDefault();
+        setStyleNames({
+            ...styleNames,
+            iconphone: styles.iconphone,
+            divBar: styles.divbar,
+        })
+    };
+
+    const handleClear = (e) => {
+        e.preventDefault();
+        setSearchWord('');
+        setStyleNames({
+            ...styleNames,
+            x: styles.hidden,
+            hidebtn: styles.hidebtn,
+        });
+        navigate("/pokemons");
+    };
 
     return (
         <div>
-            {
-                window.innerWidth < 601 && !showBar && <FcSearch onClick={handleShow} className={styles.iconphone} />
-            }
-            {
-                (showBar || window.innerWidth > 600) && <div className={classDiv}>
-                <form onSubmit={handleSubmit}>
-                    <div className={styles.bar}>
-                        <input className={classBar} type="search" onChange={handleChange} placeholder=" search pokemon..." />
-                        <FcSearch className={classIcon} />
-                        <span onClick={handleShow} className={classX}>X</span>
-                    </div>
-                </form>
+            <FcSearch onClick={handleShow} className={styleNames.iconphone} />
+            <div className={styleNames.divBar}>
+                <div className={styles.bar}>
+                    <FcSearch className={styles.searchIcon} />
+                    <input type="text" onChange={handleChange} placeholder="search pokemon..." value={searchWord} />
+                    <span onClick={handleHide} className={styleNames.hidebtn}>{">>"}</span>
+                    <span onClick={handleClear} className={styleNames.x}>X</span>
+                </div>
             </div>
-            }
         </div>
     )
 }

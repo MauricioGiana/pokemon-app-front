@@ -1,12 +1,10 @@
 .divbar {
-    position: relative;
-    top: 0;
-    right: 0;
     height: 65px;
     background: linear-gradient(to right, rgb(123, 44, 191), rgba(35, 8, 59, 0.8), 60%);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 17vw;
 }
 
 .divbarphone {
@@ -18,11 +16,12 @@
     background: linear-gradient(to left, rgb(51, 7, 90), rgb(123, 44, 191) 50%);
     /* background-color: rgb(123, 44, 191); */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
-.hidediv {
+.hidden {
     display: none;
 }
 
@@ -31,28 +30,31 @@
     flex-direction: row;
     align-items: center;
     height: 35px;
-    width: 20vw;
-}
-
-.searchbar {
-    height: 100%;
     width: 100%;
-    font-size: 100%;
-    border-radius: 15px;
     border: 2.5px solid #95d5b2;
     background-color: #240046;
-    color: whitesmoke;
-}
-
-.hidebar {
-    display: none;
-}
-
-.searchicon {
-    height: 28px;
-    width: 28px;
+    border-radius: 15px;
+    outline: #664288;
     position: relative;
-    right: 34px;
+}
+
+.bar > input {
+    height: 100%;
+    width: 70%;
+    font-size: 100%;
+    border: none;
+    background-color: transparent;
+    color: whitesmoke;
+    outline: none;
+    margin-left: 28px;
+}
+
+.searchIcon {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 8px;
+    left: 5px;
 }
 
 .iconphone {
@@ -63,42 +65,60 @@
     right: 3vw;
 }
 
-.hideicon {
-    display: none;
-}
-
-.searchx {
-    font-size: 20px;
-    position: relative;
-    right: 34px;
-    color: rgb(83, 8, 8);
-    background-color: rgb(156, 114, 192);
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
+.hidebtn {
+    font-size: 17px;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    color: rgb(82, 13, 13);
+    background-color: rgba(199, 177, 218, 0.5);
+    border-radius: 40%;
+    width: 30px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.hidex {
-    display: none;
+.x {
+    font-size: 15px;
+    position: absolute;
+    top: 7.5px;
+    right: 8px;
+    color: rgb(83, 8, 8);
+    background-color: rgba(156, 114, 192, 0.5);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .searchbar::placeholder {
     font-size: 100%;
 }
 
-@media (max-width: 800px) {
-    .bar {
-        width: 30vw;
+@media (max-width: 700px) {
+    .divbar {
+        display: none;
     }
-}
-
-@media (max-width: 600px) {
     .bar {
-        width: 80vw;
+        width: 80%;
         height: 40px;
     }
 }
 
+@media (min-width: 701px) {
+    .iconphone {
+        display: none;
+    }
+    .divbarphone {
+        display: none;
+    }
+    .hidebtn {
+        display: none;
+    }
+}

@@ -28,28 +28,28 @@ export default function NavBar() {
                     </div>
                 </div>
             </Link>
-            <div className={styles.items}>
-                <Link className={styles.homebtn} to="/pokemons">
-                    <span>Home</span>
-                </Link>
-                {
-                    current === "/pokemons/favorites" ?
-                        <Link className={styles.current} to="/pokemons/favorites"><span>Favorites</span></Link> :
-                        <Link className={styles.nocurrent} to="/pokemons/favorites"><span>Favorites</span></Link>
-                }
-                {
-                    current === "/pokemons/mypokemons" ?
-                        <Link className={styles.current} to="/pokemons/mypokemons"><span>My Pokemons</span></Link> :
-                        <Link className={styles.nocurrent} to="/pokemons/mypokemons"><span>My Pokemons</span></Link>
-                }
-                {
-                    current === "/pokemons/create" ?
-                        <Link className={styles.lastbtn2} to="/pokemons/create"><span>Create your Pokemon</span></Link> :
-                        <Link className={styles.lastbtn1} to="/pokemons/create"><span>Create your Pokemon</span></Link>
-                }
-            </div>
-            <div className={styles.search}>
-                    <SearchBar />
+                <div className={styles.items}>
+                    <Link className={styles.homebtn} to="/pokemons">
+                        <span>Home</span>
+                    </Link>
+                    {
+                        current === "/pokemons/favorites" ?
+                            <Link className={styles.current} to="/pokemons/favorites"><span>Favorites</span></Link> :
+                            <Link className={styles.nocurrent} to="/pokemons/favorites"><span>Favorites</span></Link>
+                    }
+                    {
+                        current === "/pokemons/mypokemons" ?
+                            <Link className={styles.current} to="/pokemons/mypokemons"><span>My Pokemons</span></Link> :
+                            <Link className={styles.nocurrent} to="/pokemons/mypokemons"><span>My Pokemons</span></Link>
+                    }
+                    {
+                        current === "/pokemons/create" ?
+                            <Link className={styles.lastbtn2} to="/pokemons/create"><span>Create your Pokemon</span></Link> :
+                            <Link className={styles.lastbtn1} to="/pokemons/create"><span>Create your Pokemon</span></Link>
+                    }
+                </div>
+            <div className={styles.searchbar}>
+                <SearchBar />
             </div>
         </nav>
     )

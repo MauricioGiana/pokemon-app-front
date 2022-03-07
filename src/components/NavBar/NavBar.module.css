@@ -186,13 +186,16 @@ items Link {
     padding: 3px;
 }
 
-.search {
-    margin-right: 30px;
+.searchbar {
+    margin-right: 150px;
 }
 
 @media (max-width: 1200px) {
     .items {
         width: 40vw;
+    }
+    .searchbar {
+        margin-right: 30px;
     }
 }
 
@@ -208,9 +211,6 @@ items Link {
     }
     .items {
         width: 45vw;
-    }
-    .search {
-        margin-right: 0px;
     }
 }
 
