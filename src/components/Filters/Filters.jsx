@@ -118,14 +118,17 @@ export default function Filters({ endpoint }) {
         const toggle = async () => {
             const filterscontainer = await document.getElementById('filterscontainer');
             const filtersbtn = await document.getElementById('filtersbtn');
+            const arrow = await document.getElementById('arrow');
             if (!filterscontainer.classList.contains(styles.slidein)) {
                 filterscontainer.classList.remove(styles.slideout);
                 filterscontainer.classList.add(styles.slidein);
                 filtersbtn.classList.remove(styles.slideoutbtn);
                 filtersbtn.classList.add(styles.slideinbtn);
+                arrow.classList.replace(styles.arrow, styles.invertarrow);
             } else {
                 filterscontainer.classList.replace(styles.slidein, styles.slideout);
                 filtersbtn.classList.replace(styles.slideinbtn, styles.slideoutbtn);
+                arrow.classList.replace(styles.invertarrow, styles.arrow);
             }
         }
         toggle();
@@ -139,7 +142,7 @@ export default function Filters({ endpoint }) {
         <div className={styles.filters}>
             <div id="filtersbtn" className={styles.filtersbtn} onClick={toggleFilters} >
                 <span className={styles.showfilters}>FILTERS</span>
-                <IoIosArrowDroprightCircle className={styles.arrow} />
+                <div id="arrow" className={styles.arrow}>{">"}</div>
             </div>
             <div id="filterscontainer" className={styles.filterscontainer}>
                 <div className={styles.title}><span>Filters</span></div>
