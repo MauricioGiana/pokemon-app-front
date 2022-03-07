@@ -24,6 +24,7 @@
     width: 100%;
 }
 
+
 @media (max-width: 950px) {
     .results {
         display: flex;
@@ -31,7 +32,11 @@
         align-items: center;
     }
     .container {
-        position: initial;
+        position: static;
         width: 85vw;
+    }
+    .pokemons {
+        display: flex;
+        justify-content: center;
     }
 }

@@ -240,13 +240,12 @@ items Link {
 
 @media (max-width: 450px) {
     .items {
-        width: 70vw;
         font-size: 12px;
         margin-right: 12vw;
     }
     .landicon {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }
 
