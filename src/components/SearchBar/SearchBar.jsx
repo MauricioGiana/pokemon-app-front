@@ -1,14 +1,11 @@
 import { useNavigate } from 'react-router';
 import { FcSearch } from 'react-icons/fc';
 import styles from './SearchBar.module.css';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { showItems } from '../../redux/actions';
+import { useState } from 'react';
 
 export default function SearchBar() {
     const navigate = useNavigate();
     const [searchWord, setSearchWord] = useState('');
-    const [showBar, setShowBar] = useState(false);
     const [styleNames, setStyleNames] = useState({
         iconphone: styles.iconphone,
         x: styles.hidden,

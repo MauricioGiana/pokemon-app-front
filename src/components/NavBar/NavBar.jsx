@@ -1,21 +1,12 @@
 import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
-import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
 import styles from './NavBar.module.css';
 import pokeBall from '../../assets/images/pokeBall.png';
 
 
 export default function NavBar() {
     let current = useLocation().pathname;
-    const [showItems, setShowItems] = useState(true);
-
-    const handleShow = (e) => {
-        e.preventDefault();
-        window.innerWidth < 601 && setShowItems(!showItems);
-        console.log(showItems);
-    }
 
     return (
         <nav className={styles.navbar}>
